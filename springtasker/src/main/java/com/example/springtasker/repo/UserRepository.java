@@ -1,2 +1,10 @@
-package com.example.springtasker.repo;public class UserRepository {
+package com.example.springtasker.repo;
+
+import com.example.springtasker.model.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface UserRepository extends JpaRepository<User, Long> {
+    Optional<User> findByUsername(String username);
 }
