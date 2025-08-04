@@ -3,6 +3,7 @@ package com.example.springtasker.model;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "tasks")
 public class Task {
 
     @Id
