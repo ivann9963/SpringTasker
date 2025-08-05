@@ -1,0 +1,31 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: task-service
+  
+  datasource:
+    url: jdbc:postgresql://localhost:5432/task_service_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+
+# User Service configuration for JWT validation
+user-service:
+  url: http://localhost:8081
+  validate-endpoint: /auth/validate
+
+logging:
+  level:
+    com.example.taskservice: DEBUG
+    org.springframework.security: DEBUG 
