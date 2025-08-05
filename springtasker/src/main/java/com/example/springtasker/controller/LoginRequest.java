@@ -1,2 +1,3 @@
-package com.example.springtasker.controller;public class LoginRequest {
-}
+package com.example.springtasker.controller;
+
+public record LoginRequest(String username, String password) { }

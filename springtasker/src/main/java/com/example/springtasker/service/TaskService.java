@@ -1,2 +1,4 @@
-package com.example.springtasker.service;public class TaskService {
+package com.example.springtasker.service;
+
+public class TaskService {
 }

@@ -1,2 +1,4 @@
-package com.example.springtasker.security;public class JwtUtil {
+package com.example.springtasker.security;
+
+public class JwtUtil {
 }
