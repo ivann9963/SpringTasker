@@ -24,5 +24,4 @@ public class DataLoader implements CommandLineRunner {
         }
     }
 
-    public static final String ROLE_USER = "ROLE_USER";
 }
