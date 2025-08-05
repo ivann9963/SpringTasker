@@ -1,6 +1,5 @@
 package com.example.springtasker.service;
 
-import com.example.springtasker.model.Role;
 import com.example.springtasker.model.User;
 import com.example.springtasker.repo.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
