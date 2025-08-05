@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  # User Service Database
+  user-service-db:
+    image: postgres:15
+    container_name: user-service-db
+    environment:
+      POSTGRES_DB: user_service_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - user_service_data:/var/lib/postgresql/data
+    networks:
+      - springtasker-network
+
+  # Task Service Database
+  task-service-db:
+    image: postgres:15
+    container_name: task-service-db
+    environment:
+      POSTGRES_DB: task_service_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      - task_service_data:/var/lib/postgresql/data
+    networks:
+      - springtasker-network
+
+volumes:
+  user_service_data:
+  task_service_data:
+
+networks:
+  springtasker-network:
+    driver: bridge 
