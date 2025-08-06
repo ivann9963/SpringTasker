@@ -25,7 +25,7 @@ SpringTasker/
 ├── docker-compose.yml         # Compose orchestration
 └── README.md                  # this document
 
-
+```
 ⚙️ Prerequisites
 Docker
 
