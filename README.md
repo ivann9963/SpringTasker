@@ -1,46 +1,54 @@
 SpringTasker Microservices
 
-A modular Spring Boot ecosystem featuring two services—user-service and task-service—each backed by PostgreSQL and easily deployable with Docker Compose.
+SpringTasker is a modular Spring Boot application featuring two microservices—user-service and task-service—backed by PostgreSQL and orchestrated with Docker Compose.
 
-📦 Services
+🔍 Overview
 
-Service
+user-service (port 8081):
 
-Port
+CRUD operations for user accounts via REST endpoints
 
-Description
+task-service (port 8082):
 
-user-service
+Task creation, assignment, and retrieval
 
-8081
+Integrates with user-service to fetch user details
 
-CRUD operations on user accounts
+📁 Repository Structure
 
-task-service
+SpringTasker/
+├── springtasker-services/
+│   ├── user-service/      # source and Dockerfile
+│   └── task-service/      # source and Dockerfile
+├── docker-compose.yml     # orchestrates all services
+└── README.md              # this file
 
-8082
-
-Task management; integrates with user-service for auth
-
-🔧 Prerequisites
+⚙️ Prerequisites
 
 Docker & Docker Compose
 
-Java 17 (only if you prefer local builds without Docker)
+Java 17 (optional for local builds)
 
-🚀 Quick Start
+🚀 Getting Started
 
-From the project root:
+Clone the repository
 
-# Build and launch all services
+git clone <repo-url>
+cd SpringTasker
+
+Build & launch services
+
 docker compose up --build -d
 
-# Verify running services
+Verify running containers
+
 docker ps --filter "name=user-service" --filter "name=task-service"
 
-👤 user-service → http://localhost:8081
+Access the APIs
 
-✅ task-service → http://localhost:8082
+http://localhost:8081 → user-service
+
+http://localhost:8082 → task-service
 
 📝 TODO
 
