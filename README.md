@@ -1,65 +1,59 @@
-SpringTasker Microservices
-
-A modular Spring Boot application with user-service and task-service, backed by PostgreSQL and Docker Compose.
+🚀 SpringTasker Microservices
+A modular Spring Boot ecosystem with two services, user-service and task-service, backed by PostgreSQL and orchestrated via Docker Compose.
 
 📦 Services
+Service	Port	Description
+🔹 user-service	8081	REST CRUD operations for user accounts
+🔹 task-service	8082	Task management with user-service integration
 
-Service
-
-Port
-
-Description
-
-user-service
-
-8081
-
-CRUD operations for user accounts
-
-task-service
-
-8082
-
-Task management and user integration
-
-🗂️ Repository Structure
-
+🗂️ Project Structure
+plaintext
+Copy
+Edit
 SpringTasker/
-├── springtasker-services/
-│   ├── user-service/
-│   │   └── Dockerfile
-│   └── task-service/
-│       └── Dockerfile
-├── docker-compose.yml
-└── README.md
-
+├── springtasker-services/     # renamed directory for clarity
+│   ├── user-service/          # source code + Dockerfile
+│   └── task-service/          # source code + Dockerfile
+├── docker-compose.yml         # Compose orchestration
+└── README.md                  # this document
 ⚙️ Prerequisites
+Docker
 
-Docker & Docker Compose
+Docker Compose
 
-Java 17 (optional for local development)
+Java 17 (optional for local builds)
 
-🚀 Getting Started
+🚀 Quick Start
+Clone the repo:
 
-Clone the repository
-
+bash
+Copy
+Edit
 git clone <repo-url>
 cd SpringTasker
+Build & launch containers:
 
-Build & run services
-
+bash
+Copy
+Edit
 docker compose up --build -d
+Verify running services:
 
-Verify containers
-
+bash
+Copy
+Edit
 docker ps --filter "name=user-service" --filter "name=task-service"
+Access APIs:
 
-Access the APIs
+🌐 http://localhost:8081 → user-service
 
-http://localhost:8081
-
-http://localhost:8082
+🌐 http://localhost:8082 → task-service
 
 📝 TODO
+Rename microservices/ directory to springtasker-services/
 
-Rename the microservices/ directory to springtasker-services/
+
+
+
+
+
