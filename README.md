@@ -26,37 +26,29 @@ SpringTasker/
 └── README.md                  # this document
 
 ```
-⚙️ Prerequisites
-Docker
+## ⚙️ Prerequisites
 
-Docker Compose
+- Docker  
+- Docker Compose  
+- Java 17 (optional for local builds)
 
-Java 17 (optional for local builds)
+---
 
-🚀 Quick Start
-Clone the repo
+## 🚀 Quick Start
 
-bash
-Copy
-Edit
-git clone <repo-url>
-cd SpringTasker
-Build & launch containers
-
-bash
-Copy
-Edit
-docker compose up --build -d
-Verify services
-
-bash
-Copy
-Edit
-docker ps --filter "name=user-service" --filter "name=task-service"
-Access the APIs
-
+1. **Clone the repo**  
+   ```bash
+   git clone <repo-url>
+   cd SpringTasker
+   ```
+2. Build & launch containers
+   ```
+   docker compose up --build -d
+3. Verify services
+   ```
+   docker ps --filter "name=user-service" --filter "name=task-service"  
+4. Access the APIs
 🌐 http://localhost:8081 — user-service
-
 🌐 http://localhost:8082 — task-service
 
 📝 TODO
